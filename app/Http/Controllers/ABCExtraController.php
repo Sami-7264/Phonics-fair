@@ -18,7 +18,6 @@ class ABCExtraController extends Controller
             ->where('pf_group_type.title', '=', 'ABCs Extra')
             ->where('pf_lessons.deleted', '=', 0)
             ->get();
-        dd($lessons->toArray());
         return view('abc-extra' ,['lessons' => $lessons]);
     }
 }
