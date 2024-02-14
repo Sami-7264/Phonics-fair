@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500;600;700&display=swap');
+body{
+    font-family: 'Gothic A1', sans-serif;
+}
+ul{ list-style: none; padding-left: 0;}
+a{ text-decoration: none;}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1150px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1339px) {
+    .container {
+        max-width: 1100px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .container {
+        max-width: 880px;
+    }
+}
+
+.header-top {
+    position: relative;
+    z-index: 4
+}
+
+.header {
+    width: 100%;
+    margin: 0 auto;
+    background: url('../images/header-bg.jpg') no-repeat 0 0/cover;
+    height: 96px;
+    margin-top: 0px;
+    position: relative;
+    z-index: 5
+}
+.header nav li .nav-link {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 8px 14px !important;
+    color: #6c0404 !important;
+    text-shadow: 3px 1px 2px rgba(255,255,255);
+}
+
+ul.language li {
+    cursor: pointer;
+    font-size: 12px;
+    color: #000;
+    text-align: right;
+}
+.main-wrapper{
+    background-color: #f7f8fd;
+}
+.left-sidebar .panel-login{
+    background-color: #FFCC33;
+    padding: 10px 4px;
+    border-radius: 5px;
+    border: 2px solid #A4A7AE;
+    width: 100%;
+    text-align: center;
+}
+.left-sidebar .panel-login .title{
+    color: #262627;
+    text-shadow: 2px 1px rgba(255,255,255);
+    font-weight: 600;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+.left-sidebar .panel-login a{
+    background: #FFFF99;
+    color: #55552A;
+    border: 1px solid #55552A;
+    border-radius: 5px;
+    padding: 10px 2px;
+    font-weight: 700;
+    font-size: 18px;
+    width: max-content;
+    margin: 0 auto;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content-sec{ margin: 20px 0; padding: 0 15px;}
+.content-sec .lesson-heading{
+    color: #333366;
+    font-weight: 600;
+    font-size: 45px;
+}
+
+.content-sec .lesson-heading span {
+    font-size: 29px;
+}
+.content-sec .lesson-heading img {
+    width: 65px;
+    top: -15px;
+    position: relative;
+}
+
+.content-sec .list-lessons {
+    background-color: #f3f0f0;
+    padding: 12px;
+    position: relative;
+    margin-top: 40px;
+    text-align: center;
+}
+.content-sec .list-lessons a{
+    width: 115px;
+}
+
+.footer{
+    background: url('../images/footer.png') no-repeat;
+    background-size: cover;
+    margin: 20px auto;
+    width: 100%;
+    padding-top: 20px;
+}
+.footer ul{ text-align: center;}
+
+.footer .footer-links > a {
+    color: #4A4545;
+}
+.footer .footer-links > a:hover {
+    color: #3366cc;
+}
+.footer .footer-links {
+    font-size: 22px;
+    padding: 7px 20px;
+    display: inline-block;
+}
+.copyright {
+    color: #fff;
+    font-size: 13px;
+}
+@media(max-width:767px) {
+    .left-sidebar .panel-login, .left-sidebar img{ width: 100%;}
+    .content-sec .list-lessons img{
+        margin-bottom: 20px;
+    }
+    .header{ height: 65px;}
+    .navbar-collapse.show {
+        background: #99dff7;
+    }
+    .content-sec .lesson-heading{ font-size: 32px;}
+    .content-sec .lesson-heading span{ font-size: 22px;}
+    .content-sec .list-lessons{ margin-top: 20px;}
+    .footer{ background-position: bottom; margin: 10px auto;}
+}
+
+
