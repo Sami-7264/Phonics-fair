@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ABCExtraController;
+use App\Http\Controllers\GameCardController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LessonController;
 use App\Http\Controllers\ShortStoriesController;
@@ -24,6 +25,7 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/abc-extra', [ABCExtraController::class, 'index'])->name('abc-extra');
 Route::get('/sound-patterns', [SoundPatternsController::class, 'index'])->name('sound-patterns');
 Route::get('/short-stories', [ShortStoriesController::class, 'index'])->name('short-stories');
+Route::get('/game-cards', [GameCardController::class, 'index'])->name('game-cards');
 Route::get('/start-reading', [StartReadingController::class, 'index'])->name('start-reading');
 Route::get('/start-reading(16-22)', [StartReadingController::class, 'startReading1'])->name('start-reading(16-22)');
 Route::get('/start-reading(23-29)', [StartReadingController::class, 'startReading2'])->name('start-reading(23-29)');

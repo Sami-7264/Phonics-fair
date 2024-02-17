@@ -18,10 +18,10 @@
                                                                       alt="Sound patterns"></a></li>
                 <li><a href="/start-reading"><img class="img-fluid" src="images/level16.png"
                                                           alt="Start readings"></a></li>
-{{--                <li><a href="/short-stories"><img class="img-fluid"--}}
-{{--                                                                     src="images/parent_short_stories.png"></a></li>--}}
-{{--                <li><a href="/lessons/game_cards"><img class="img-fluid" src="images/game.png" alt="Game cards"></a>--}}
-{{--                </li>--}}
+                <li><a href="/short-stories"><img class="img-fluid"
+                                                                     src="images/parent_short_stories.png"></a></li>
+                <li><a href="/game-cards"><img class="img-fluid" src="images/game.png" alt="Game cards"></a>
+                </li>
                 <li><a href="/en/home/contact_us"><img class="img-fluid" src="images/contact.png" alt="contact us"></a>
                 </li>
             </ul>
