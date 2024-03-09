@@ -63,7 +63,10 @@
 
                         @if($lesson['group_video'])
                             <div class="col-4 col-md">
-                                <a href="{{ asset('upload/'. $lesson['group_video']) }}" target="_blank"> <img src="{{ asset('images/video.png') }}"></a>
+{{--                                <a href="{{ asset('upload/'. $lesson['group_video']) }}" target="_blank"> <img src="{{ asset('images/video.png') }}"></a>--}}
+                                <a href="{{ route('video-manager', ['video_url' => asset('upload/'. $lesson['group_video'])]) }}" target="_blank">
+                                    <img src="{{ asset('images/video.png') }}">
+                                </a>
                             </div>
                         @endif
                     </div>

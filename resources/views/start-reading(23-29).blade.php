@@ -23,6 +23,9 @@
                         </div>
                     </div>
                 </div>
+                @php
+                    $counter = 1;
+                @endphp
                 @foreach ($lessons as $lesson)
                     @if (!isset($groupedLessons[$lesson['group_image']]))
                         @php
@@ -53,10 +56,15 @@
                             // Sort the items by priority
                             ksort($sortedItems);
                         @endphp
-
                         <div class="col-6 col-md">
-                            <a class="" href="{{ asset('upload/'. $lesson['group_sound']) }}" target="_blank"> <img alt="" class="img-fluid" src="{{ asset('upload/' . $groupImage) }}"></a>
+                            <audio id="backgroundSound{{ $counter }}" src="{{ asset('upload/'. $lesson['group_sound']) }}" preload="auto"></audio>
+                            <a class="playSound" href="#" data-soundId="{{ $counter }}">
+                                <img alt="" class="img-fluid" src="{{ asset('upload/' . $groupImage) }}">
+                            </a>
                         </div>
+                        @php
+                            $counter++;
+                        @endphp
 
                         {{-- Render the sorted items --}}
                         @foreach ($sortedItems as $priority => $lessons)
@@ -68,7 +76,10 @@
                         @endforeach
 
                         <div class="col-6 col-md">
-                            <a href="{{ asset('upload/'. $lesson['group_video']) }}" target="_blank"> <img src="{{ asset('images/video.png') }}"></a>
+{{--                            <a href="{{ asset('upload/'. $lesson['group_video']) }}" target="_blank"> <img src="{{ asset('images/video.png') }}"></a>--}}
+                            <a href="{{ route('video-manager', ['video_url' => asset('upload/'. $lesson['group_video'])]) }}" target="_blank">
+                                <img src="{{ asset('images/video.png') }}">
+                            </a>
                         </div>
                     </div>
                 @endforeach
@@ -77,4 +88,21 @@
         </div>
 
     </div>
+    <script>
+        var currentlyPlayingAudio = null;
+
+        document.querySelectorAll('.playSound').forEach(function(anchor) {
+            anchor.addEventListener('click', function() {
+                var soundId = this.getAttribute('data-soundId');
+                var audio = document.getElementById('backgroundSound' + soundId);
+
+                if (currentlyPlayingAudio) {
+                    currentlyPlayingAudio.pause();
+                }
+
+                audio.play();
+                currentlyPlayingAudio = audio;
+            });
+        });
+    </script>
 @endsection

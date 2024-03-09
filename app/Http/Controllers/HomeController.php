@@ -18,4 +18,8 @@ class HomeController extends Controller
 //        dd($lessons->toArray());
         return view('index', ['lessons' => $lessons]);
     }
+
+    public function groupLetter(){
+        return view('group-letter');
+    }
 }

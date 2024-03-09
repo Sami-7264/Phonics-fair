@@ -21,7 +21,7 @@
                     </div>
                     <div class="col-md-auto pe-3">
                         <div class="letters-groups">
-                            <a href="#"><img src="https://phonicsfair.com/images/lessons/logo_sample.png"></a>
+                            <a href="{{route('group-letter')}}"><img src="https://phonicsfair.com/images/lessons/logo_sample.png"></a>
                         </div>
                     </div>
                 </div>
@@ -68,7 +68,10 @@
 {{--                        @endfor--}}
                         @if($lesson['group_video'])
                         <div class="col-6 col-md">
-                            <a href="{{ asset('upload/'. $lesson['group_video']) }}" target="_blank"> <img src="{{ asset('images/video.png') }}"></a>
+{{--                            <a href="{{ asset('upload/'. $lesson['group_video']) }}" target="_blank"> <img src="{{ asset('images/video.png') }}"></a>--}}
+                            <a href="{{ route('video-manager', ['video_url' => asset('upload/'. $lesson['group_video'])]) }}" target="_blank">
+                                <img src="{{ asset('images/video.png') }}">
+                            </a>
                         </div>
                         @endif
                     </div>

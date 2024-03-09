@@ -7,6 +7,7 @@ use App\Http\Controllers\LessonController;
 use App\Http\Controllers\ShortStoriesController;
 use App\Http\Controllers\SoundPatternsController;
 use App\Http\Controllers\StartReadingController;
+use App\Http\Controllers\videoManagerController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,6 +23,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/group-letter', [HomeController::class, 'groupLetter'])->name('group-letter');
+Route::get('/video', [videoManagerController::class, 'manageVideo'])->name('video-manager');
 Route::get('/abc-extra', [ABCExtraController::class, 'index'])->name('abc-extra');
 Route::get('/sound-patterns', [SoundPatternsController::class, 'index'])->name('sound-patterns');
 Route::get('/short-stories', [ShortStoriesController::class, 'index'])->name('short-stories');

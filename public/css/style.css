@@ -151,3 +151,59 @@ ul.language li {
 }
 
 
+.letters-text{
+    float:left;
+    width:709px;
+    margin-bottom:20px;
+    font-size:24px;
+}
+.click-hear {
+    margin: 10px auto;
+    width: 368px;
+}
+img{
+    max-width: 100%;
+    vertical-align: middle;
+    border: 0;
+}
+.click_listen {
+    text-align: center;
+    position: relative;
+}
+.click_listen .sound {
+    height: 0;
+    overflow: hidden;
+}
+
+.letter {
+}
+.audio_sound {
+    cursor: pointer;
+    font-family: Comic Sans MS;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 26px;
+}
+.group-sample {
+    left:-17px !important;
+    top:-27px !important;
+}
+table {
+    border: 0 none;
+    border-spacing: 0;
+    font-size: 100%;
+    border: 1px solid #ACABB0;
+}
+table td {
+    border: 1px solid #ACABB0;
+    height: 85px;
+    width: 64px;
+    padding: 28px 0 20px;
+    text-align: center;
+}
+table td:first-child{ /*position:relative;*/}
+.click-hear {
+    margin:10px auto;
+    width:368px;
+}
+

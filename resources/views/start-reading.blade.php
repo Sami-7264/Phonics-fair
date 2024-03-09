@@ -20,7 +20,7 @@
                     </div>
                     <div class="col-md-auto pe-3">
                         <div class="letters-groups">
-                            <a href="#"><img src="https://phonicsfair.com/images/lessons/logo_sample.png"></a>
+                            <a href="{{route('group-letter')}}"><img src="https://phonicsfair.com/images/lessons/logo_sample.png"></a>
                         </div>
                     </div>
                 </div>
