@@ -52,7 +52,21 @@
                     </div><div class="row align-items-center gx-md-0 list-lessons">
                         @endif
                             <div class="col-6 col-md">
-                                <a class="" href="{{ asset('upload/'. $lesson['attach_file']) }}" target="_blank"> <img alt="" class="img-fluid" src="{{ asset('upload/' . $lesson['img']) }}"></a>
+                                <a href="#" onclick="submitPdfForm('{{ $lesson['attach_file'] }}')" class="btn-link p-0">
+                                        <img alt="" class="img-fluid" src="{{ asset('upload/' . $lesson['img']) }}">
+                                    </a>
+
+                                    <form id="pdfForm" method="get" action="{{ route('pdf.show') }}">
+                                        @csrf <!-- Add CSRF token for security -->
+                                        <input type="hidden" name="filename" id="filenameInput" value="">
+                                    </form>
+
+                                    <script>
+                                        function submitPdfForm(filename) {
+                                            document.getElementById('filenameInput').value = filename;
+                                            document.getElementById('pdfForm').submit();
+                                        }
+                                    </script>
                             </div>
                         @php
                             $imageCounter++; // Increment image counter
