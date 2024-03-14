@@ -12,7 +12,7 @@ class PdfController extends Controller
         $pdfPath = 'upload/' . $filename;
         // Check if the file exists
         if (file_exists($pdfPath)) {
-            return view('pdf.show', compact('pdfPath'));
+            return view('pdf.show', ['pdfPath' => asset($pdfPath)]);
         } else {
             abort(404);
         }
